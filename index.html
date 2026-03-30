@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Transforme Seu Corpo em 30 Dias</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #0f172a;
+    color: white;
+}
+
+/* HEADER */
+header {
+    background: linear-gradient(45deg, #22c55e, #16a34a);
+    padding: 60px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+/* SEÇÕES */
+section {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.container {
+    max-width: 900px;
+    margin: auto;
+}
+
+/* BOTÃO */
+.botao {
+    background: #22c55e;
+    color: black;
+    padding: 18px 35px;
+    border: none;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    width: auto;
+}
+
+.botao:hover {
+    background: #16a34a;
+}
+
+/* CARDS */
+.card {
+    background: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 10px;
+    flex: 1 1 200px;
+}
+
+/* FLEX */
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* IMAGEM */
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* CONTADOR */
+#contador {
+    font-size: 32px;
+    color: #facc15;
+}
+
+/* 📱 RESPONSIVO */
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 26px;
+    }
+
+    header {
+        padding: 40px 15px;
+    }
+
+    section {
+        padding: 30px 15px;
+    }
+
+    .botao {
+        width: 100%;
+        font-size: 18px;
+        padding: 15px;
+    }
+
+    .card {
+        width: 100%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd">
+
+    <div>
+        <h1>🔥 Perca até 5kg em 30 dias</h1>
+        <p>Método simples que qualquer pessoa pode fazer em casa</p>
+    </div>
+</header>
+
+<section>
+    <div class="container">
+        <h2> Veja como funciona</h2>
+
+       <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74">
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>🔥 O que você vai aprender</h2>
+
+        <div class="flex">
+            <div class="card">🍎 Alimentação simples e barata</div>
+            <div class="card">🏋️ Treinos em casa</div>
+            <div class="card">⚡ Mais energia</div>
+            <div class="card">🔥 Queima de gordura</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>💬 Depoimentos</h2>
+
+        <div class="flex">
+            <div class="card">"Perdi 5kg em 30 dias!"</div>
+            <div class="card">"Muito fácil de seguir!"</div>
+            <div class="card">"Funcionou de verdade!"</div>
+        </div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>⏳ Oferta acaba em:</h2>
+        <div id="contador">10:00</div>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>💰 Oferta Especial</h2>
+        <p><s>R$ 49,90</s></p>
+        <h1 style="color:#22c55e;">R$ 19,90</h1>
+
+        <button class="botao" onclick="comprar()">QUERO COMEÇAR AGORA</button>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <h2>🔒 Compra 100% segura</h2>
+        <p>Pagamento via Pix ou cartão com proteção total</p>
+    </div>
+</section>
+
+<footer style="background:#020617; padding:20px; text-align:center;">
+    <p>© 2026 - Todos os direitos reservados</p>
+</footer>
+
+<script>
+// CONTADOR
+let tempo = 600;
+
+setInterval(() => {
+    let min = Math.floor(tempo / 60);
+    let seg = tempo % 60;
+
+    document.getElementById("contador").textContent =
+        String(min).padStart(2,'0') + ":" + String(seg).padStart(2,'0');
+
+    if (tempo > 0) tempo--;
+}, 1000);
+
+// BOTÃO DE COMPRA
+function comprar() {
+    window.location.href = "https://pay.kiwify.com.br/GFlTugd";
+}
+</script>
+
+</body>
+</html>
